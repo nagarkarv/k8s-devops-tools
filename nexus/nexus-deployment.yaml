@@ -22,13 +22,9 @@ spec:
           ports:
             - containerPort: 8081
           volumeMounts:
-            - name: nexus-data
+            - name: efs-pvc 
               mountPath: /nexus-data
-            - name: efs-pvc
-              mountPath: "/mnt-vikram"
       volumes:
-        - name: nexus-data
-          emptyDir: {}
         - name: efs-pvc
           persistentVolumeClaim:
             claimName: efs          
