@@ -2,7 +2,6 @@ apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
   name: nexus
-  namespace: devops-tools
 spec:
   replicas: 1
   template:
@@ -25,6 +24,11 @@ spec:
           volumeMounts:
             - name: nexus-data
               mountPath: /nexus-data
+            - name: efs-pvc
+              mountPath: "/mnt-vikram"
       volumes:
         - name: nexus-data
           emptyDir: {}
+        - name: efs-pvc
+          persistentVolumeClaim:
+            claimName: efs          
