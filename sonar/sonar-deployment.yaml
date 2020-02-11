@@ -30,7 +30,7 @@ spec:
           - name: "SONARQUBE_JDBC_USERNAME"
             value: "postgres"
           - name: "SONARQUBE_JDBC_URL"
-            value: "jdbc:postgresql://database-1-instance-1.ctxposwyndfe.eu-west-2.rds.amazonaws.com:5432"
+            value: "jdbc:postgresql://database-1-instance-1.ctxposwyndfe.eu-west-2.rds.amazonaws.com:5432/sonarqube"
           - name: "SONARQUBE_JDBC_PASSWORD"
             valueFrom:
               secretKeyRef:
