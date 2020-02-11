@@ -23,9 +23,9 @@ spec:
               memory: 2048Mi
           volumeMounts:
           - mountPath: "/opt/sonarqube/data/"
-            name: sonar-data-pv
+            name: sonar-data
           - mountPath: "/opt/sonarqube/extensions/"
-            name: sonar-extensions-pv
+            name: sonar-extensions
           env:
           - name: "SONARQUBE_JDBC_USERNAME"
             value: "postgres"
