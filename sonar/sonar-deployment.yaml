@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
         - name: sonarqube
-          image: sonarqube:7.1
+          image: sonarqube:7.9.2-community
           resources:
             requests:
               cpu: 500m
@@ -30,7 +30,7 @@ spec:
           - name: "SONARQUBE_JDBC_USERNAME"
             value: "postgres"
           - name: "SONARQUBE_JDBC_URL"
-            value: "jdbc:postgresql://database-1-instance-1.ctxposwyndfe.eu-west-2.rds.amazonaws.com:5432/sonarqube"
+            value: "jdbc:postgresql://database-1-instance-1.ctxposwyndfe.eu-west-2.rds.amazonaws.com:5432/"
           - name: "SONARQUBE_JDBC_PASSWORD"
             valueFrom:
               secretKeyRef:
